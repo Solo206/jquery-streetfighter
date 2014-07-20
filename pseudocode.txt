@@ -1,0 +1,22 @@
+/*
+-Loading page: Ryu standing still
+-Hover mouse on Ryu: Ryu-ready pose
+-Stop hover: Ryu standing still
+-Click on Ryu:Ryu leans forward and throws Hadouken
+-Click off Ryu:Ryu-ready pose
+-keydown "x"-Ryu cool pose
+-keyup "x"-Ryu ready pose
+
+* Note each image is same size 659x494
+
+Can hide(), image currently showing and show right one
+swap in right Ryu image, but also load Hadouken image in right spot.
+Then make hadouken image move from left to right
+-Sound effects must occur at same time
+
+Break down of events
+-initial-Ryu standing still
+-mouseenter and mouseleave-move into and out of ready position
+-listen for click events-initate Hadouken sequence
+-mousedown and mouseup components to sequence
+Listen for x and keyup events and resond with cool sequence.
