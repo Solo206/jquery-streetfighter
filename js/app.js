@@ -1,4 +1,18 @@
 $(document).ready(function(){
+	intro();
+	gameDemo();
+});
+function playHadouken () {
+	$('#hadouken-sound')[0].volume=0.5;
+	$('#hadouken-sound')[0].load();
+	$('#hadouken-sound')[0].play();
+}
+function intro(){
+	$('#ryu-theme')[0].volume=0.5;
+	$('#ryu-theme')[0].load();
+	$('#ryu-theme')[0].play();
+}
+function gameDemo(){
 	$('.ryu').mouseenter(function(){
 		$('.ryu-still').hide();
 		$('.ryu-ready').show();
@@ -21,7 +35,6 @@ $(document).ready(function(){
 				$(this).hide();
 				$(this).css('left','-155px');
 		});
-		//play hadouken sound
 	})
 	.mouseup(function(){
 		// console.log('mouseup');
@@ -30,9 +43,4 @@ $(document).ready(function(){
 		$('.ryu-still').show();
 		//ryu goes back to ready position
 	});
-});
-function playHadouken () {
-	$('#hadouken-sound')[0].volume=0.5;
-	$('#hadouken-sound')[0].load();
-	$('#hadouken-sound')[0].play();
-}
+	}
