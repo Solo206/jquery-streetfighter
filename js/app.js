@@ -3,6 +3,7 @@ $(document).ready(function(){
 	gameDemo();
 });
 function playHadouken () {
+	$('#ryu-theme')[0].stop();
 	$('#hadouken-sound')[0].volume=0.5;
 	$('#hadouken-sound')[0].load();
 	$('#hadouken-sound')[0].play();
