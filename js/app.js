@@ -26,7 +26,7 @@ function cool(){
 	if (coolsound){
 		$('#ryu-theme')[0].pause();
 		$('#cooltheme')[0].volume=0.5;
-		//$('#cooltheme')[0].load();
+		$('#cooltheme')[0].load();
 		$('#cooltheme')[0].play();
 	}
 }
@@ -108,7 +108,6 @@ function gameDemo(){
 	$(document).keyup(function(e){
 	if (e.which==88){
 		// $('#cooltheme')[0].pause();
-		$('#cooltheme')[0].load()
 		$('.ryu-still').show();
 		$('.ryu-cool').hide();
 		$('.endsub').show();
