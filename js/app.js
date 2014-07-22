@@ -102,7 +102,7 @@ function gameDemo(){
 		$('.ryu-cool').show();
 		$('.main').css({'background':'url(images/starry2.png) no-repeat left bottom'});
 		$('.endsub').show();
-		titleoff();
+
 		}
 	});
 	$(document).keyup(function(e){
