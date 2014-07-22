@@ -77,11 +77,11 @@ function gameDemo(){
 		$('.ryu-throwing').show();
 		$('.hadouken').finish().show()
 		.animate(
-			{'left':'300px'},
+			{'left':'1000px'},
 			500,
 			function(){
 				$(this).hide();
-				$(this).css('left','-155px');
+				$(this).css('left','470px');
 		});
 	})
 	.mouseup(function(){
@@ -91,6 +91,7 @@ function gameDemo(){
 		$('.ryu-still').show();
 		//ryu goes back to ready position
 	});
+
 	$(document).keydown(function(e){
 	if (e.which==88){
 		//method that loads animated gif of cool
@@ -104,6 +105,14 @@ function gameDemo(){
 		$('.endsub').show();
 		titleoff();
 		}
+	else if (e.which==83){
+		//ryu div moves right
+
+		$('.ryu').css({'left':'+=5px'});
+	}
+	else if (e.which==65){
+		$('.ryu').css({'left':'-=5px'});
+	}
 	});
 	$(document).keyup(function(e){
 	if (e.which==88){
