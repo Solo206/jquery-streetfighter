@@ -32,10 +32,12 @@ function cool(){
 }
 function introScreen(){
 	introSound();
-	$('.title').show();
-	$('.startsub').show();
-	$('.block').hide();
 	reset();
+	//fade in then out jQuery image
+	//fade in title and startsub image
+	$('.jQuery').fadeIn("slow").fadeOut(3000, function(){	$('.title').fadeIn("slow");
+	$('.startsub').fadeIn("slow");});
+	$('.block').hide();
 	$(document).keydown(function(s){
 	if(s.which==32){
 		//go to instruction screen first
@@ -44,6 +46,8 @@ function introScreen(){
 	});
 }
 function reset(){
+	$('.title').hide();
+	$('.startsub').hide();
 	$('.main').css({'background':'white'});
 	$('#cooltheme')[0].pause();
 	$('.instructions').hide();

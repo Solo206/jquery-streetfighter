@@ -94,6 +94,12 @@ body{
 /*	border:1px solid red;*/
 	margin:0 auto;
 }
+.jQuery{
+	background:url('../images/jQuery-logo.png') no-repeat;
+	display:block;
+	height:80%;
+	margin:0 auto;
+}
 .startsub{
 	display:inline-block;
 /*	background:red;*/
