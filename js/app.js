@@ -81,6 +81,8 @@ function gameDemo(){
 			{'left':'550px'},
 			500,
 			function(){
+				//things to do after the animation is finished-show the div holding hadouken
+				//note the div holder for hadouken is actually the collider and div block for destructible sign is obstacle
 				$('.hadouken-hold').show();
 				var collider='.hadouken-hold';
 				var obstacle='.block';
@@ -101,6 +103,7 @@ function gameDemo(){
 	
 	$(document).keydown(function(e){
 	if (e.which==88){
+		//88 is ASCII for x
 		//method that loads animated gif of cool
 		cool();
 		$('.block').show();
@@ -116,10 +119,13 @@ function gameDemo(){
 		}
 	else if (e.which==83){
 		//ryu div moves right
+		//83 is ASCII for s
 
 		$('.ryu').css({'left':'+=5px'});
 	}
 	else if (e.which==65){
+		//ryu div moves left
+		//65 is ASCII for a
 		$('.ryu').css({'left':'-=5px'});
 	}
 	});
@@ -132,6 +138,7 @@ function gameDemo(){
 		$('.endsub').show();
 	}
 	if (e.which==13){
+		//13 is asc code for enter which loops back to introScreen
 		introScreen();
 	}
 	});
