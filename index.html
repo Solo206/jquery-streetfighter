@@ -6,7 +6,8 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="">
-	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery-collision.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
 <body>
@@ -16,21 +17,23 @@
 			<div class="ryu-ready"></div>
 			<div class="ryu-throwing"></div>
 			<div class="ryu-cool"></div>
-			<div class="hadouken"></div>	
+			<div class="hadouken-hold">
+				<div class="hadouken"></div>
+			</div>	
 		</div>
-		
+		<div class="block break"></div>
 		<div class="contentbox">
 			<div class="title"></div>
 			<div class="startsub">Press spacebar to continue</div>
 			<div class="instructions">
 				<p>Mouse click on Ryu to perform Hadouken.</p>
-				<p>Click x to do 'cool' pose.</p>
 				<p>Move right and left using A and S keys</p>
+				<p>Click x to do 'cool' pose.</p>
 			</div>
 			<div class="quote">
 				<p>"You did quite well, but you need more training to defeat me!"<br>~Ryu</p>
 			</div>
-			<div class="endsub">Press enter to exit</div>
+			<div class="endsub">'Hadouken' the sign post...<br>Press enter to exit</div>
 		</div>
 	</div>
 	<audio id="ryu-theme" src="sound/Ryu2theme.mp3">

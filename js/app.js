@@ -34,6 +34,7 @@ function introScreen(){
 	introSound();
 	$('.title').show();
 	$('.startsub').show();
+	$('.block').hide();
 	reset();
 	$(document).keydown(function(s){
 	if(s.which==32){
@@ -77,31 +78,39 @@ function gameDemo(){
 		$('.ryu-throwing').show();
 		$('.hadouken').finish().show()
 		.animate(
-			{'left':'1000px'},
+			{'left':'550px'},
 			500,
 			function(){
+				$('.hadouken-hold').show();
+				var collider='.hadouken-hold';
+				var obstacle='.block';
+				var hits=$(collider).collision(obstacle);
+				hits.css({'background':'url(images/breaksign.gif) no-repeat'});
 				$(this).hide();
-				$(this).css('left','470px');
+				$(this).css('left','0px');
 		});
 	})
 	.mouseup(function(){
 		// console.log('mouseup');
+		$('hadouken-hold').hide();
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').hide();
 		$('.ryu-still').show();
 		//ryu goes back to ready position
 	});
-
+	
 	$(document).keydown(function(e){
 	if (e.which==88){
 		//method that loads animated gif of cool
 		cool();
+		$('.block').show();
 		$('.instructions').hide();
 		$('.quote').show();
 		$('.ryu-ready').hide();
 		$('.ryu-still').hide();
 		$('.ryu-cool').show();
 		$('.main').css({'background':'url(images/starry2.png) no-repeat left bottom'});
+		$('.block').css({'background':'url(images/sign.png) no-repeat'});
 		$('.endsub').show();
 		titleoff();
 		}
