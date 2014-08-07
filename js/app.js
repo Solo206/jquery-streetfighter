@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	introScreen();
+
 });
 var hadoukensound=false;
 function playHadouken () {
@@ -46,6 +47,9 @@ function introScreen(){
 	$(document).keydown(function(s){
 	if(s.which==32){
 		//go to instruction screen first
+		$('.jQuery').finish();
+		$('.title').finish();
+		$('.startsub').finish();
 		gameDemo();
 	}
 	});
@@ -84,6 +88,7 @@ function gameDemo(){
 		playHadouken();
 		$('.ryu-still').hide();
 		$('.ryu-ready').hide();
+		$('.ryu-cool').hide();
 		$('.ryu-throwing').show();
 		$('.hadouken').finish().show()
 		.animate(
@@ -129,12 +134,15 @@ function gameDemo(){
 	else if (e.which==83){
 		//ryu div moves right
 		//83 is ASCII for s
-
+		$('.ryu-still').hide();
+		$('.ryu-ready').show();
 		$('.ryu').css({'left':'+=5px'});
 	}
 	else if (e.which==65){
 		//ryu div moves left
 		//65 is ASCII for a
+		$('.ryu-still').hide();
+		$('.ryu-ready').show();
 		$('.ryu').css({'left':'-=5px'});
 	}
 	});
